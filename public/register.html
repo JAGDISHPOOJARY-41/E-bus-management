@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create account — Wayfinder EBus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+
+<body class="auth-page">
+  <div class="auth-split">
+    <aside class="auth-hero">
+      <a class="brand" href="/"><span
+          class="brand-mark"><span></span><span></span><span></span></span><span>wayfinder</span></a>
+      <h1>Join thousands of daily commuters.</h1>
+      <p>Create your free Wayfinder account and never wait at the wrong stop again.</p>
+      <ul class="hero-points">
+        <li><span>✦</span> Personalised dashboard with your routes</li>
+        <li><span>✦</span> Travel history and monthly insights</li>
+        <li><span>✦</span> Your details stored securely in MongoDB</li>
+      </ul>
+      <div class="hero-art"><span></span><span></span><span></span></div>
+    </aside>
+
+    <main class="auth-panel">
+      <form class="auth-box" id="registerForm" novalidate>
+        <span class="auth-brand"><span></span><span></span><span></span> wayfinder</span>
+        <h2>Create your account</h2>
+        <p class="auth-sub">It takes less than a minute.</p>
+
+        <div class="auth-row">
+          <label class="auth-field"><span>Full name</span>
+            <input type="text" id="regName" placeholder="Arjun Sharma" autocomplete="name" required />
+          </label>
+          <label class="auth-field"><span>Phone</span>
+            <input type="tel" id="regPhone" placeholder="+91 98765 43210" autocomplete="tel" />
+          </label>
+        </div>
+        <label class="auth-field"><span>Email</span>
+          <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email" required />
+        </label>
+        <label class="auth-field"><span>City</span>
+          <input type="text" id="regCity" placeholder="Bengaluru" autocomplete="address-level2" />
+        </label>
+        <div class="auth-row">
+          <label class="auth-field"><span>Password</span>
+            <input type="password" id="regPassword" placeholder="Min. 6 characters" autocomplete="new-password"
+              required />
+            <small class="hint" id="pwHint">Use at least 6 characters.</small>
+          </label>
+          <label class="auth-field"><span>Confirm password</span>
+            <input type="password" id="regConfirm" placeholder="Repeat password" autocomplete="new-password" required />
+          </label>
+        </div>
+        <p class="auth-error" id="regError"></p>
+        <button type="submit" class="auth-submit" id="regBtn">Create account <span>→</span></button>
+        <p class="auth-switch">Already registered? <a class="link-button" href="login.html">Sign in instead</a></p>
+      </form>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="auth.js"></script>
+</body>
+
+</html>

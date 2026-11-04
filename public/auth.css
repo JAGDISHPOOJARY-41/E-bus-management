@@ -1,0 +1,19 @@
+/* ── Auth pages (login / register) ── */
+.auth-page{min-height:100vh}
+.auth-split{display:flex;min-height:100vh}
+.auth-hero{flex:1.1;background:var(--ink);color:#edf5ec;padding:56px 58px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.auth-hero .brand{padding:0 0 60px}
+.auth-hero h1{font-size:clamp(28px,3.4vw,44px);letter-spacing:-1.4px;line-height:1.12;margin:0 0 16px;max-width:480px}
+.auth-hero p{color:#a9bdb5;max-width:420px;line-height:1.7;font-size:15px;margin:0 0 34px}
+.hero-points{list-style:none;margin:0;padding:0;display:grid;gap:14px;position:relative;z-index:1}
+.hero-points li{display:flex;align-items:center;gap:12px;color:#d7e6d5;font-weight:600;font-size:14px}
+.hero-points span{color:var(--lime);font-size:16px}
+.hero-art{margin-top:auto;display:flex;gap:8px;align-items:flex-end;height:120px;opacity:.55}
+.hero-art span{display:block;width:14px;border-radius:10px;background:linear-gradient(to top,var(--lime),transparent)}
+.hero-art span:nth-child(1){height:35%}.hero-art span:nth-child(2){height:70%}.hero-art span:nth-child(3){height:50%}
+.hero-art span:nth-child(4){height:90%}.hero-art span:nth-child(5){height:60%}
+.auth-panel{flex:1;display:flex;align-items:center;justify-content:center;padding:48px 24px;background:var(--paper)}
+.auth-box{width:100%;max-width:430px;background:var(--white);border-radius:22px;padding:38px 36px 30px;box-shadow:var(--shadow);animation:authFade .45s ease}
+.auth-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:860px){.auth-hero{display:none}}
+@media (max-width:520px){.auth-row{grid-template-columns:1fr}.auth-box{padding:28px 22px}}

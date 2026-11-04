@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in — Wayfinder EBus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+
+<body class="auth-page">
+  <div class="auth-split">
+    <aside class="auth-hero">
+      <a class="brand" href="/"><span
+          class="brand-mark"><span></span><span></span><span></span></span><span>wayfinder</span></a>
+      <h1>Your city, one tap away.</h1>
+      <p>Live bus tracking, smart routes and arrival alerts — all in one workspace.</p>
+      <ul class="hero-points">
+        <li><span>✦</span> Real-time bus positions across the city</li>
+        <li><span>✦</span> Save your favourite stops and routes</li>
+        <li><span>✦</span> Get alerts before your bus arrives</li>
+      </ul>
+      <div class="hero-art"><span></span><span></span><span></span></div>
+    </aside>
+
+    <main class="auth-panel">
+      <form class="auth-box" id="loginForm" novalidate>
+        <span class="auth-brand"><span></span><span></span><span></span> wayfinder</span>
+        <h2>Welcome back</h2>
+        <p class="auth-sub">Sign in to track your routes in real time.</p>
+
+        <label class="auth-field"><span>Email</span>
+          <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email" required />
+        </label>
+        <label class="auth-field"><span>Password</span>
+          <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" required />
+        </label>
+        <p class="auth-error" id="loginError"></p>
+        <button type="submit" class="auth-submit" id="loginBtn">Sign in <span>→</span></button>
+        <p class="auth-switch">New here? <a class="link-button" href="register.html">Create an account</a></p>
+      </form>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="auth.js"></script>
+</body>
+
+</html>
